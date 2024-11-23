@@ -1,0 +1,149 @@
+@font-face {
+  font-family: "Inter", sans-serif;
+  src: url("font/Inter.ttc") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --font: "Inter", sans-serif;
+  --textColor: #333333;
+  --mainBGColor: #ffffff;
+  --sColor: #a0d1e844;
+  --btnBGColor: #ff6b6b;
+  --btnBGColorHover: #ff4f4f;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--mainBGColor);
+  color: var(--textColor);
+  text-align: center;
+}
+
+/* clip box */
+.clip-box {
+  position: relative;
+  width: 350px;
+}
+
+#copyMessage {
+  position: absolute;
+  top: -25px; /* Default top position */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  background-color: #e7f7e7;
+  color: green;
+  padding: 10px;
+  border: 1px solid #c8e6c9;
+  font-size: 0.9rem;
+  border-radius: 0 0 20px 20px;
+  text-align: center;
+  opacity: 0; /* Initially hidden */
+  visibility: hidden; /* To avoid blocking space when hidden */
+  transition: opacity 0.3s ease;
+}
+
+/* Slide-in animation */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    top: -25px;
+  }
+  to {
+    opacity: 1;
+    top: -10px; /* Active top position */
+  }
+}
+
+#copyMessage.slide-in {
+  visibility: visible; /* Make visible when sliding in */
+  animation: slideIn 0.3s ease forwards;
+}
+
+/* Slide-out animation */
+@keyframes slideOut {
+  from {
+    opacity: 1;
+    top: -20px; /* Active top position */
+  }
+  to {
+    opacity: 0;
+    top: -25px; /* Default top position */
+  }
+}
+
+#copyMessage.slide-out {
+  animation: slideOut 0.3s ease forwards;
+  visibility: hidden; /* Hide after sliding out */
+}
+
+
+.clip-title-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 10px 0 ;
+}
+
+.clip-title-box h2 {
+  font-size: 1rem;
+  font-family: var(--font);
+}
+
+button.clearHistory {
+  width: fit-content;
+  padding: 10px 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  background-color: var(--btnBGColor);
+  border: 1px solid var(--btnBGColor);
+  color: #fff;
+}
+
+button.clearHistory:hover {
+  background-color: var(--btnBGColorHover);
+}
+
+.historyList {
+  /* border: 1px solid rgba(255, 0, 0, 0.182); */
+  min-height: 100px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.history-item {
+  padding: 10px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  background-color: #f9f9f9;
+  border: 1px solid #20202023;
+  border-radius: 0px;
+}
+
+.history-item:hover {
+  background-color: var(--sColor);
+}
+
+/* powered by */
+.powered-by-box {
+  margin: 10px 0 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* border: 1px solid red; */
+ }
+ 
+ .powered-by-box p.app-from {
+   font-size: 0.75rem;
+ }
+ 
+ .powered-by-box p a {
+   color: black;
+ }
+ 
+ .app-version {
+   color: #b3b3b3;
+   font-size: 0.6rem;
+ }

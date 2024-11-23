@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Clipboard Manager</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="clip-box">
+
+      <div id="copyMessage"></div>
+
+      <div class="clip-title-box">
+        <h2>Clipboard Manager</h2>
+
+        <!-- Hidden message initially -->
+        <button id="clearHistory" class="clearHistory">Clear History</button>
+      </div>
+
+      <div id="historyList" class="historyList"></div>
+
+      <!-- powered by Appedle -->
+      <div class="powered-by-box">
+        <p class="app-version">v0.1</p>
+
+        <p class="app-from">
+          A product from
+          <a href="https://appedle.com?utm_source=lightloom" target="_blank"
+            >Appedle</a
+          >
+        </p>
+
+        <p class="cap app-version">20 Max</p>
+      </div>
+
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

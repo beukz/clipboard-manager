@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Appedle: Clipboard Manager",
+  "version": "1.0",
+  "description": "A clipboard manager that stores copied text using local storage",
+  "permissions": [
+    "clipboardRead", 
+    "clipboardWrite", 
+    "storage", 
+    "scripting", 
+    "tabs"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
