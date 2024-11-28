@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Appedle: Clipboard Manager",
+  "name": "TUC: Clipboard",
   "version": "1.0",
-  "description": "A clipboard manager that stores copied text using local storage",
+  "description": "A clipboard manager display all the text you have copied.",
   "permissions": [
     "clipboardRead", 
     "clipboardWrite", 
