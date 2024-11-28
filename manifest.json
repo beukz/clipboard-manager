@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "TUC: Clipboard",
-  "version": "1.0",
+  "version": "0.1",
   "description": "A clipboard manager display all the text you have copied.",
   "permissions": [
     "clipboardRead", 
